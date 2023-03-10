@@ -1,0 +1,20 @@
+section {
+    height: 60vh;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    // align-content: center;
+    justify-content: center;
+}
+
+span {
+    color: var(--red);
+}
+
+h2 {
+    font-weight: 400;
+    padding-top: 0.8rem;
+}
