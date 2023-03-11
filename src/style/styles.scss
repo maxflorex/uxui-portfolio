@@ -1,7 +1,8 @@
 :root {
     --red: #ea2e00;
     --green: #9dbdb8;
-    --dark: #1b1d29;
+    --dark: #111111;
+    --off: #ffffff50;
     --gap-sm: 0.4rem;
     --gap-md: 0.8rem;
     --gap-lg: 1rem;
@@ -13,7 +14,8 @@
     $direction: row,
     $justify: center,
     $items: center,
-    $width: 100%
+    $width: 100%,
+    $gap: 2rem
 ) {
     display: flex;
     flex-direction: $direction;
@@ -21,7 +23,10 @@
     align-items: $items;
     width: $width;
     box-sizing: border-box;
+    gap: $gap;
 }
+
+// ! ELEMENTS
 
 body {
     background-color: var(--dark);
@@ -40,12 +45,14 @@ h2 {
     font-size: 2rem;
 }
 
-h3 {
+h3,
+button {
     font-size: 1rem;
 }
 
 p {
     font-size: 0.8rem;
+    line-height: 1.6rem;
 }
 
 h1,
@@ -62,6 +69,32 @@ ul {
     padding: 0;
 }
 
+button {
+    border-radius: 4rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--red);
+    border-style: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: var(--green);
+    }
+}
+
+img {
+    border-radius: 0.4rem;
+}
+
+footer {
+    padding: 6rem 0;
+    background-color:  var(--green);
+}
+
+// ! CLASSES
+
 .grid-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -69,16 +102,21 @@ ul {
 }
 
 .container {
-    grid-column-start: 2;
-    grid-column-end: 12;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
 }
 
-.row {
-    display: flex;
-    gap: var(--gap-lg);
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.flex {
+    @include flex();
+
+    &.justify-between {
+        justify-content: space-between;
+    }
+    &.flex-col {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 

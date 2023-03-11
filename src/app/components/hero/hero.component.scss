@@ -1,13 +1,6 @@
 section {
-    height: 60vh;
-}
-
-.container {
+    height: 70vh;
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    // align-content: center;
-    justify-content: center;
 }
 
 span {
@@ -17,4 +10,9 @@ span {
 h2 {
     font-weight: 400;
     padding-top: 0.8rem;
+}
+
+.flex {
+    align-items: flex-start;
+    gap: 0;
 }

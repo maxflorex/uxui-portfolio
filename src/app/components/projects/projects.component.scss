@@ -1,0 +1,55 @@
+img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+section {
+    padding-top: 8rem;
+    padding-bottom: 14rem;
+}
+
+.line {
+    border-top: 2px solid var(--off);
+    margin-top: 0.6rem;
+    max-width: 12rem;
+    justify-self: center;
+    width: 20%;
+}
+
+p {
+    color: var(--off);
+    min-width: 4rem;
+    width: auto;
+
+    &.nowrap {
+        // white-space: nowrap;
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+    }
+}
+
+.flex-col {
+    gap: 0.8rem;
+    margin-top: -1rem;
+
+    p {
+        width: 60%;
+    }
+}
+
+.flex {
+    align-items: flex-start;
+
+    &.desc {
+        gap: 8rem;
+    }
+}
+
+p {
+    span {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
