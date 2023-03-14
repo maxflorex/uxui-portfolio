@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { ProjectComponent } from './pages/project/project.component';
+import { FooterNextComponent } from './components/footer-next/footer-next.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ProjectComponent } from './pages/project/project.component';
     HomeComponent,
     ErrorComponent,
     ProjectComponent,
+    FooterNextComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,10 @@
     --gap-sm: 0.4rem;
     --gap-md: 0.8rem;
     --gap-lg: 1rem;
+    --xl: 1280px;
+    --lg: 1024px;
+    --md: 768px;
+    --sm: 640px
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -26,7 +30,17 @@
     gap: $gap;
 }
 
+@mixin media($screen: 1024px) {
+    @media (max-width: $screen) {
+        @content;
+    }
+}
+
 // ! ELEMENTS
+
+* {
+    box-sizing: content-box;
+}
 
 body {
     background-color: var(--dark);
@@ -88,7 +102,6 @@ button {
     color: white;
     font-weight: 600;
     cursor: pointer;
-    white-space: nowrap;
 
     &:hover {
         background-color: var(--green);
@@ -117,6 +130,10 @@ footer {
     margin: auto;
     padding: 0 2rem;
     min-height: 100%;
+
+    @include media(1024) {
+        
+    }
 }
 
 .flex {

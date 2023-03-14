@@ -1,3 +1,27 @@
+@mixin media($screen: 1024px) {
+    @media (max-width: $screen) {
+        @content;
+    }
+}
+
 nav {
     padding: 2rem;
+}
+
+nav {
+    @include media(1024px) {
+        button {
+            display: none;
+        }
+
+        ul {
+            justify-content: flex-end;
+        }
+    }
+
+    @include media(768px) {
+        ul {
+            display: none;
+        }
+    }
 }
