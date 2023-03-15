@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
   constructor(public HygraphService: HygraphService) { }
 
   getProjects() {
-    this.HygraphService.projects.then((res) => {
-      console.log(res);
+    this.HygraphService.projects.then((res: any) => {
+      console.log(res?.projects);
     }).catch(() => {
       console.log('Oops! Something is not working');
     })

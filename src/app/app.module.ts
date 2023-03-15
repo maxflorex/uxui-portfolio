@@ -25,6 +25,7 @@ import { AllProjectsComponent } from './pages/all-projects/all-projects.componen
     ProjectComponent,
     FooterNextComponent,
     AllProjectsComponent,
+
   ],
   imports: [
     BrowserModule,

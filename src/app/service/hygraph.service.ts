@@ -1,17 +1,8 @@
 import { GraphQLClient } from 'graphql-request';
-import { environment } from 'src/enviroments/enviroment';
+import { enviroment } from 'src/enviroments/enviroment';
 import { Injectable } from '@angular/core';
 import { from } from 'rxjs';
 import { getProjects } from './query';
-
-// const graphcmsEndpoint: string = environment.graphcmsEndpoint;
-// const graphcmsToken: string = environment.graphcmsToken;
-// const headers = { authorization: `Bearer ${graphcmsToken}` };
-// const graphqlClient = new GraphQLClient(graphcmsEndpoint, { headers });
-
-// export const hygraph = new GraphQLClient(
-//   environment.graphcms.graphcmsEndpoint
-// );
 
 
 @Injectable({
@@ -21,7 +12,7 @@ import { getProjects } from './query';
 export class HygraphService {
 
   hygraphClient = new GraphQLClient(
-    environment.graphcmsEndpoint
+    enviroment.graphcmsEndpoint
   );
 
   projects = this.hygraphClient.request(getProjects)
