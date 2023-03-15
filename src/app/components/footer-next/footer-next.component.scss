@@ -1,0 +1,19 @@
+footer {
+    color: var(--dark);
+
+    a {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--dark);
+    }
+
+    &:hover {
+        background-color: white;
+        transition: 0.1s ease-in-out;
+
+        a {
+            text-decoration: underline;
+            text-underline-offset: 1rem;
+        }
+    }
+}
