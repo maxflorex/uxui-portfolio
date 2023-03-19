@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { HygraphService } from 'src/app/service/hygraph.service';
+import { HygraphService } from 'src/app/util/service/hygraph.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public HygraphService: HygraphService) { }
+	constructor(public HygraphService: HygraphService) { }
 
-  getProjects() {
-    this.HygraphService.projects.then((res: any) => {
-      console.log(res?.projects);
-    }).catch(() => {
-      console.log('Oops! Something is not working');
-    })
-  }
+	getProjects() {
+		this.HygraphService.projects.then((res: any) => {
+			console.log(res?.projects);
+		}).catch(() => {
+			console.log('Oops! Something is not working');
+		})
+	}
 
-  ngOnInit(): void {
-    this.getProjects()
-  }
+	ngOnInit(): void {
+		this.getProjects()
+	}
 
 }
