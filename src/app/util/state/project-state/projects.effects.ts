@@ -7,11 +7,10 @@ import { loadProjects } from './projects.actions'
 @Injectable()
 export class ItemEffect {
 
-    loadProjects$ = createEffect(() =>
-        this.actions$.pipe(
-            ofType(loadProjects),
+    loadProjects$ = createEffect(() => this.actions$.pipe(
+            ofType('[Projects List] Load Projects'),
             mergeMap(() => this.hygraph.projects),
-            map(projects => ({ type: '[Project] Projects Loaded Success', payload: {projects} }))
+            map(projects => ({ type: '[Project] Projects Loaded Success', payload: projects }))
         ))
 
 

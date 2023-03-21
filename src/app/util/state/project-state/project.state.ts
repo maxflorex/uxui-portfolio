@@ -1,7 +1,5 @@
-export interface ProjectModel {
-    id: string;
-    title: string;
-}
+import { ProjectModel } from "./project.interface";
+
 
 export interface ProjectState {
     loading: boolean,

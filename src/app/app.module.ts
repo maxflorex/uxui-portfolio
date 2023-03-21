@@ -14,7 +14,6 @@ import { AllProjectsComponent } from './pages/all-projects/all-projects.componen
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ProjectReducer } from './util/state/projects.reducuers';
 import { ROOT_REDUCERS } from './util/state/app.state';
 import { EffectsModule } from '@ngrx/effects';
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,16 +6,19 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent implements OnInit, OnChanges {
 
-  name = ''
-  email = ''
+  @Input() Projects: any
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.name = 'Plutarco'
-    this.email = 'yimail'
+    console.log(this.Projects);
+
   }
-  
+
+  ngOnChanges(changes: SimpleChanges) {
+    // if (changes.data)
+  }
+
 }

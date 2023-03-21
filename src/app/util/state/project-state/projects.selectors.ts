@@ -3,7 +3,7 @@ import { AppState } from './app.state'
 import { ProjectState } from './project.state'
 
 // SELECTOR RELATED TO ITEMS
-export const selectProjectsFeature = (state: AppState) => state.items
+export const selectProjectsFeature = (state: AppState) => state.projects
 
 export const selectListItems = createSelector(
     selectProjectsFeature,

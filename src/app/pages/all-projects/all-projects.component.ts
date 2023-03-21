@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store'
-import { loadedProjectsSuccess, loadProjects } from 'src/app/util/state/projects.actions';
 import { Observable } from 'rxjs'
-import { selectListItems, selectLoading } from 'src/app/util/state/projects.selectors';
 import { HygraphService } from 'src/app/util/service/hygraph.service';
 
 @Component({
@@ -24,19 +22,22 @@ export class AllProjectsComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
-        this.loading$ = this.store.select(selectLoading)
+        this.items$ = this.store.select('projects')
 
-        this.myItems$ = this.hygraph.projects.then((res: any) => {
-            this.store.dispatch(loadedProjectsSuccess({ projects: res.projects }))
-        }).catch((error) => {
-            console.log(error);
+        console.log(this.items$);
+        
 
-        })
+        // this.myItems$ = this.hygraph.projects.then((res: any) => {
+        //     this.store.dispatch(loadedProjectsSuccess({ projects: res.projects }))
+        // }).catch((error) => {
+        //     console.log(error);
 
-        this.items$ = this.store.select(selectListItems)
+        // })
 
-        console.log(this.loading$)
-
+        // this.items$ = this.store.select(selectListItems).subscribe((item) => {
+        //     console.log(item);
+            
+        // })
     }
 
 
