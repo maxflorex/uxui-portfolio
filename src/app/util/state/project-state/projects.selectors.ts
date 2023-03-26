@@ -1,11 +1,11 @@
 import { createSelector } from '@ngrx/store'
-import { AppState } from './app.state'
+import { AppState } from '../app.state'
 import { ProjectState } from './project.state'
 
-// SELECTOR RELATED TO ITEMS
-export const selectProjectsFeature = (state: AppState) => state.projects
+// SELECTOR RELATED TO PROJECTSLISTS
+export const selectProjectsFeature = (state: AppState) => state.projectsList
 
-export const selectListItems = createSelector(
+export const selectListProjects = createSelector(
     selectProjectsFeature,
     (state: ProjectState) => state.projects
 )

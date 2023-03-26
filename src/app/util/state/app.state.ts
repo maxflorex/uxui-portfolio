@@ -1,12 +1,12 @@
 
 import { ActionReducerMap } from '@ngrx/store'
 import { ProjectState } from './project-state/project.state'
-import { ProjectReducer } from './project-state/projects.reducuers'
+import { ProjectReducer } from './project-state/projects.reducers'
 
 export interface AppState {
-    projects: ProjectState
+    projectsList: ProjectState
 }
 
 export const ROOT_REDUCERS: ActionReducerMap<AppState> = {
-    projects: ProjectReducer
+    projectsList: ProjectReducer
 }

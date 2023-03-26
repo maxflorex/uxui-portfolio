@@ -1,3 +1,5 @@
 <Hero />
-<Projects [Projects]="data$" />
+
+<h1>Loading... {{loading$ | async | json}}</h1>
+<Projects />
 <app-footer />

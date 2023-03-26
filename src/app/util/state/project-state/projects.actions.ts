@@ -3,12 +3,12 @@ import { ProjectModel } from './project.interface';
 
 
 export const loadProjects = createAction(
-    '[Projects List] Load Projects'
+    '[Projects List] Set Projects',
 );
 
 export const loadedProjectsSuccess = createAction(
-    '[Projects List] Projects Loaded',
-    props<{ projects: ProjectModel[] | unknown}>()
+    '[Projects List] Projects Loaded Succesfully',
+    props<{ projects: ProjectModel[]}>()
 );
 
 

@@ -16,6 +16,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ROOT_REDUCERS } from './util/state/app.state';
 import { EffectsModule } from '@ngrx/effects';
+import { ProjectEffect } from './util/state/project-state/projects.effects';
+import { ProjectReducer } from './util/state/project-state/projects.reducers';
 
 @NgModule({
 	declarations: [
@@ -35,8 +37,11 @@ import { EffectsModule } from '@ngrx/effects';
 		AppRoutingModule,
 		HttpClientModule,
 		StoreModule.forRoot(ROOT_REDUCERS),
-		StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-		EffectsModule.forRoot([]),
+		// StoreModule.forRoot({
+		// 	estadoDeProjects: ProjectReducer
+		// }),
+		StoreDevtoolsModule.instrument({ name: 'TEST' }),
+		EffectsModule.forRoot([ProjectEffect]),
 	],
 	providers: [],
 	bootstrap: [AppComponent]

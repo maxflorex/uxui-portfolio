@@ -13,7 +13,8 @@ export class ProjectComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.project = this.route.snapshot.params['project']
+    this.project = this.route.snapshot.params['project']    
   }
+
 
 }
