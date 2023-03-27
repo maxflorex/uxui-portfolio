@@ -7,7 +7,7 @@ export const loadProjects = createAction(
 );
 
 export const loadedProjectsSuccess = createAction(
-    '[Projects List] Projects Loaded Succesfully',
+    '[Projects List] Projects Loaded Success',
     props<{ projects: ProjectModel[]}>()
 );
 

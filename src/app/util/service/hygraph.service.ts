@@ -20,10 +20,9 @@ export class HygraphService {
 	// GET DATA
 	getDataApi(): Observable<any> {
 		const projectsPromise = this.hygraphClient.request(getProjects);
-		const projectsObservable = from(projectsPromise).pipe(delay(1000));
+		const projectsObservable = from(projectsPromise).pipe(delay(1500));
 		return projectsObservable;
 	}
-
 
 	constructor() { }
 }
