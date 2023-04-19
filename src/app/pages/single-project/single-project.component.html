@@ -1,0 +1,152 @@
+<div *ngFor="let projects of projectList$ | async; let i = index">
+
+    <article class="container flex main">
+
+        <!-- * PROJECT -->
+        <div class="role">
+            <h3>Role</h3>
+            <p>Visual Designer</p>
+            <p>User Experience</p>
+            <h3>Date</h3>
+            <p>{{projects.date}}</p>
+            <h3>Duration</h3>
+            <p>{{projects.duration}}</p>
+        </div>
+        <!-- * LINE -->
+        <span class="line"></span>
+        <!-- * TITLE -->
+        <div class="flex flex-col">
+            <h1 class="">{{projects.title}}</h1>
+            <p>{{projects.overview.text}}</p>
+        </div>
+
+    </article>
+
+    <!-- BANNER -->
+    <div class="container image">
+        <img src={{projects.bannerPicture[0].url}} alt="Project Banner" class="">
+    </div>
+
+    <!-- THE PROBLEM -->
+    <article class="container flex">
+        <p>01/02</p>
+        <!-- * LINE -->
+        <span class="line"></span>
+        <div class="flex flex-col">
+            <h2>The Problem</h2>
+            <p>{{projects.theProblem.text}}</p>
+        </div>
+    </article>
+
+    <!-- BANNER -->
+    <div class="container image">
+        <img src="{{projects.problemBanner.url}}" alt="Project Banner" class="">
+    </div>
+
+    <!-- THE SOLUTION -->
+    <article class="container flex">
+        <p>01/02</p>
+        <!-- * LINE -->
+        <span class="line"></span>
+        <div class="flex flex-col">
+            <h2>The Solution</h2>
+            <p>{{projects.theSolution.text}}</p>
+        </div>
+    </article>
+
+    <!-- BANNER -->
+    <div class="container image">
+        <img src={{projects.bannerMu.url}} alt="Project Banner" class="">
+    </div>
+
+    <!-- THE PERSONA -->
+    <article class="container flex">
+        <p>01/02</p>
+        <!-- * LINE -->
+        <span class="line"></span>
+        <div class="flex flex-col">
+            <h2>The Persona</h2>
+            <p>{{projects.persona.text}}</p>
+        </div>
+    </article>
+
+    <!-- BANNER -->
+    <div class="container grid column-2">
+        <img src={{projects.personaBanner.url}} alt="Project Banner" class="">
+    </div>
+
+    <!-- THE COMPETITION -->
+    <article class="container flex">
+        <p>01/02</p>
+        <!-- * LINE -->
+        <span class="line"></span>
+        <div class="flex flex-col">
+            <h2>Competitive Analysis</h2>
+            <p>{{projects.competitiveAnalysis.text}}</p>
+        </div>
+    </article>
+
+    <!-- BANNER -->
+    <div class="container grid column-2">
+        <img src={{projects.competition.url}} class="">
+    </div>
+
+    <!-- THE DESIGN -->
+    <article class="container flex">
+        <p>01/02</p>
+        <!-- * LINE -->
+        <span class="line"></span>
+        <div class="flex flex-col">
+            <h2>Design</h2>
+            <p>
+                {{projects.design.markdown}}
+            </p>
+        </div>
+    </article>
+
+
+    <!-- BANNER -->
+    <div class="container grid column-2">
+        <img src={{projects.wireframe[0].url}} class="">
+    </div>
+
+
+
+    <!-- THE TESTING -->
+    <article class="container flex">
+        <p>01/02</p>
+        <!-- * LINE -->
+        <span class="line"></span>
+        <div class="flex flex-col">
+            <h2>Testing</h2>
+            <p>{{projects.testing.text}}</p>
+        </div>
+    </article>
+
+
+    <!-- BANNER -->
+    <div class="container image mockups">
+        <img *ngFor="let mockup of projects.mockups" [src]="mockup.url" alt="Mockup web" class="mobile">
+    </div>
+
+
+    <!-- THE CONCLUSION -->
+    <article class="container flex">
+        <p>01/02</p>
+        <!-- * LINE -->
+        <span class="line"></span>
+        <div class="flex flex-col">
+            <h2>Conclusion</h2>
+            <p>{{projects.conclusion.text}}</p>
+        </div>
+    </article>
+
+
+    <!-- BANNER -->
+    <div class="container image mockups">
+        <img *ngFor="let mockup of projects.mockupsWeb" [src]="mockup.url" alt="Mockup web">
+    </div>
+
+
+    <app-footer-next></app-footer-next>
+</div>

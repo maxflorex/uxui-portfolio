@@ -1,0 +1,25 @@
+@import '../../../style/styles.scss';
+
+.modal {
+    background-color: var(--green);
+    padding: 2rem;
+    border-radius: 0.4rem;
+    color: var(--dark);
+    position: absolute;
+    margin-top: 1rem;
+    @include flex(column, center, center, 8rem, 0.6rem);
+    text-align: center;
+
+    i {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        color: var(--red);
+        cursor: pointer;
+
+        &.mail {
+            position: static;
+            color: white;
+        }
+    }
+}

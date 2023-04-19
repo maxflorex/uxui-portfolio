@@ -2,7 +2,7 @@ import { GraphQLClient } from 'graphql-request';
 import { enviroment } from 'src/enviroments/enviroment';
 import { Injectable } from '@angular/core';
 import { delay, from, Observable } from 'rxjs';
-import { getProjects } from './query';
+import { getProjects, getSingleProjects } from './query';
 
 
 @Injectable({
@@ -17,10 +17,17 @@ export class HygraphService {
 	);
 
 
-	// GET DATA
+	// GET PROJECT DATA
 	getDataApi(): Observable<any> {
 		const projectsPromise = this.hygraphClient.request(getProjects);
-		const projectsObservable = from(projectsPromise).pipe(delay(1500));
+		const projectsObservable = from(projectsPromise).pipe(delay(1000));
+		return projectsObservable;
+	}
+
+	// GET PROJECT DATA
+	getSingleDataApi(slug: any): Observable<any> {
+		const projectsPromise = this.hygraphClient.request(getSingleProjects, slug);
+		const projectsObservable = from(projectsPromise).pipe(delay(1000));
 		return projectsObservable;
 	}
 

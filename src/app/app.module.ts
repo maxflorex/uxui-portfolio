@@ -17,6 +17,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { ProjectEffect } from './util/state/project-state/projects.effects';
 import { SingleProjectComponent } from './pages/single-project/single-project.component';
 import { AllProjectsComponent } from './pages/all-projects/all-projects.component';
+import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
+import { ImageModalComponent } from './components/image-modal/image-modal.component';
 
 @NgModule({
 	declarations: [
@@ -29,7 +31,9 @@ import { AllProjectsComponent } from './pages/all-projects/all-projects.componen
 		ErrorComponent,
 		FooterNextComponent,
 		SingleProjectComponent,
-  AllProjectsComponent,
+		AllProjectsComponent,
+		ContactModalComponent,
+  ImageModalComponent,
 	],
 	imports: [
 		BrowserModule,

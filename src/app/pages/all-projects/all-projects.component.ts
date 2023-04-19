@@ -19,6 +19,9 @@ export class AllProjectsComponent implements OnInit {
 		// DISPATCH LOADPROJECTS FIRST SO THE EFFECTS TRIGGER THE NEXT REDUCER WHERE DATA IS LOADED
 		this.projectList$ = this.store.select(selectListProjects)
 
+		console.log(this.projectList$);
+		
+
 
 		// SETTIMEOUT PREVENTS US FROM GETTING A STATE CHANGE ERROR
 		setTimeout(() => {

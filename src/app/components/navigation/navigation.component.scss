@@ -9,6 +9,14 @@ nav {
 }
 
 nav {
+    li {
+        font-weight: 800;
+
+        h3 {
+            cursor: pointer;
+        }
+    }
+
     @include media(1024px) {
         button {
             display: none;
@@ -24,4 +32,8 @@ nav {
             display: none;
         }
     }
+}
+
+.contact {
+    position: relative;
 }
