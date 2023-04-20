@@ -1,14 +1,12 @@
-@mixin media($screen: 1024px) {
-    @media (max-width: $screen) {
-        @content;
-    }
-}
+@import '../../../style/styles.scss';
 
 nav {
-    padding: 2rem;
-}
+    padding: 2rem !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
 
-nav {
     li {
         font-weight: 800;
 
@@ -36,4 +34,18 @@ nav {
 
 .contact {
     position: relative;
+}
+
+.second-column {
+    @include flex(row, flex-end, center, auto, 2rem);
+}
+
+.nav-child {
+    @include flex(row, space-between, center, 100%, 2rem);
+    max-width: 1440px;
+    margin: auto;
+
+    @include media(768px) {
+        justify-content: center;
+    }
 }

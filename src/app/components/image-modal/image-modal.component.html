@@ -1,1 +1,4 @@
-<p>image-modal works!</p>
+<div class="modal" *ngIf="isUrlString">
+    <img src="{{ url$ | async }}" class="Large Image Modal" alt="">
+    <i class="ri-close-circle-fill ri-2x" (click)="onCloseModal()"></i>
+</div>

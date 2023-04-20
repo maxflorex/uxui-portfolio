@@ -1,13 +1,12 @@
-<nav class="container">
-    <div class="flex justify-between">
-
+<nav>
+    <div class="nav-child">
         <!-- LOGO -->
         <a routerLink="/">
             <img src="../../../assets/mx-logo-red.svg" alt="Logo" />
         </a>
 
         <!-- MENU -->
-        <ul class="flex">
+        <ul class="second-column">
             <li><a routerLink="/">Home</a></li>
             <li><a routerLink="/projects">Projects</a></li>
             <li class="contact">
@@ -16,10 +15,7 @@
                     <app-contact-modal *ngIf="sharedService.contactState"></app-contact-modal>
                 </div>
             </li>
+            <li> <i class="ri-moon-line"></i></li>
         </ul>
-
-        <!-- TOGGLE -->
-        <!-- <i class="ri-sun-line ri-xl"></i> -->
-        <i class="ri-moon-line"></i>
     </div>
 </nav>

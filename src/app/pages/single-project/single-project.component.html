@@ -24,7 +24,8 @@
 
     <!-- BANNER -->
     <div class="container image">
-        <img src={{projects.bannerPicture[0].url}} alt="Project Banner" class="">
+        <img src={{projects.bannerPicture[0].url}} alt="Project Banner" class=""
+            (click)="openImage(projects.bannerPicture[0].url)">
     </div>
 
     <!-- THE PROBLEM -->
@@ -40,11 +41,12 @@
 
     <!-- BANNER -->
     <div class="container image">
-        <img src="{{projects.problemBanner.url}}" alt="Project Banner" class="">
+        <img src="{{projects.problemBanner.url}}" alt="Project Banner" class=""
+            (click)="openImage(projects.problemBanner.url)">
     </div>
 
     <!-- THE SOLUTION -->
-    <article class="container flex">
+    <article class=" container flex">
         <p>01/02</p>
         <!-- * LINE -->
         <span class="line"></span>
@@ -56,7 +58,7 @@
 
     <!-- BANNER -->
     <div class="container image">
-        <img src={{projects.bannerMu.url}} alt="Project Banner" class="">
+        <img src={{projects.bannerMu.url}} alt="Project Banner" class="" (click)="openImage(projects.bannerMu.url)">
     </div>
 
     <!-- THE PERSONA -->
@@ -72,11 +74,12 @@
 
     <!-- BANNER -->
     <div class="container grid column-2">
-        <img src={{projects.personaBanner.url}} alt="Project Banner" class="">
+        <img src={{projects.personaBanner.url}} alt="Project Banner" class=""
+            (click)="openImage(projects.personaBanner.url)">
     </div>
 
     <!-- THE COMPETITION -->
-    <article class="container flex">
+    <article class=" container flex">
         <p>01/02</p>
         <!-- * LINE -->
         <span class="line"></span>
@@ -88,7 +91,7 @@
 
     <!-- BANNER -->
     <div class="container grid column-2">
-        <img src={{projects.competition.url}} class="">
+        <img src={{projects.competition.url}} class="" (click)="openImage(projects.competition.url)">
     </div>
 
     <!-- THE DESIGN -->
@@ -107,7 +110,7 @@
 
     <!-- BANNER -->
     <div class="container grid column-2">
-        <img src={{projects.wireframe[0].url}} class="">
+        <img src={{projects.wireframe[0].url}} class="" (click)="openImage(projects.wireframe[0].url)">
     </div>
 
 
@@ -126,7 +129,8 @@
 
     <!-- BANNER -->
     <div class="container image mockups">
-        <img *ngFor="let mockup of projects.mockups" [src]="mockup.url" alt="Mockup web" class="mobile">
+        <img *ngFor="let mockup of projects.mockups" [src]="mockup.url" alt="Mockup web" class="mobile"
+            (click)="openImage(mockup.url)">
     </div>
 
 
@@ -144,9 +148,10 @@
 
     <!-- BANNER -->
     <div class="container image mockups">
-        <img *ngFor="let mockup of projects.mockupsWeb" [src]="mockup.url" alt="Mockup web">
+        <img *ngFor="let mockup of projects.mockupsWeb" [src]="mockup.url" alt="Mockup web"
+            (click)="openImage(mockup.url)">
     </div>
 
-
+    <app-image-modal></app-image-modal>
     <app-footer-next></app-footer-next>
 </div>
