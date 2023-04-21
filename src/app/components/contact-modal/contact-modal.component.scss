@@ -1,10 +1,10 @@
 @import '../../../style/styles.scss';
 
 .modal {
-    background-color: var(--green);
+    background-color: $green;
     padding: 2rem;
     border-radius: 0.4rem;
-    color: var(--dark);
+    color: $dark;
     position: absolute;
     margin-top: 1rem;
     @include flex(column, center, center, 8rem, 0.6rem);
@@ -14,7 +14,7 @@
         position: absolute;
         top: -10px;
         right: -10px;
-        color: var(--red);
+        color: $red;
         cursor: pointer;
 
         &.mail {

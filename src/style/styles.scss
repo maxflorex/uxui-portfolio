@@ -1,43 +1,5 @@
-:root {
-    --red: #ea2e00;
-    --redOff: #ea2e0080;
-    --green: #9dbdb8;
-    --greenOff: #9dbdb880;
-    --dark: #111111;
-    --darkOff: #11111180;
-    --off: #ffffff50;
-    --gap-sm: 0.4rem;
-    --gap-md: 0.8rem;
-    --gap-lg: 1rem;
-    --xl: 1280px;
-    --lg: 1024px;
-    --md: 768px;
-    --sm: 640px;
-}
-
-@mixin flex(
-    $direction: row,
-    $justify: center,
-    $items: center,
-    $width: 100%,
-    $gap: 2rem
-) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $items;
-    width: $width;
-    box-sizing: border-box;
-    gap: $gap;
-}
-
-@mixin media($screen: 1024px) {
-    @media (max-width: $screen) {
-        @content;
-    }
-}
-
-// ! ELEMENTS
+@import './variables.scss';
+@import './mixins.scss';
 
 * {
     box-sizing: content-box;
@@ -45,7 +7,7 @@
 }
 
 body {
-    background-color: var(--dark);
+    background-color: $dark;
     font-family: 'Poppins', sans-serif;
     color: white;
     margin: 0;
@@ -69,7 +31,7 @@ h2 {
 
 h3,
 button {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 p {
@@ -99,14 +61,18 @@ a {
 button {
     border-radius: 4rem;
     padding: 1rem 1.5rem;
-    background-color: var(--red);
+    background-color: $red;
     border-style: none;
     color: white;
     font-weight: 600;
     cursor: pointer;
 
     &:hover {
-        background-color: var(--green);
+        background-color: $green;
+    }
+
+    @include media {
+        padding: 0.5 1rem;
     }
 }
 
@@ -116,7 +82,7 @@ img {
 
 footer {
     padding: 6rem 0;
-    background-color: var(--green);
+    background-color: $green;
 }
 
 // ! CLASSES

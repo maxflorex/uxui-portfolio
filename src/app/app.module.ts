@@ -19,6 +19,7 @@ import { SingleProjectComponent } from './pages/single-project/single-project.co
 import { AllProjectsComponent } from './pages/all-projects/all-projects.component';
 import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
 	declarations: [
@@ -33,7 +34,8 @@ import { ImageModalComponent } from './components/image-modal/image-modal.compon
 		SingleProjectComponent,
 		AllProjectsComponent,
 		ContactModalComponent,
-  ImageModalComponent,
+		ImageModalComponent,
+  AboutComponent,
 	],
 	imports: [
 		BrowserModule,

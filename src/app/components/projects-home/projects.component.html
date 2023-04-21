@@ -1,4 +1,4 @@
-<div *ngFor="let projects of projectList$ | async; let i = index">
+<div *ngFor="let projects of projectList$ | async; let i = index" class="parent-single">
 
     <!-- BANNER -->
     <img src={{projects.bannerPicture[0].url}} alt="Project Banner" class="big">
@@ -6,15 +6,19 @@
     <!-- DESCRIPTION -->
     <section class="container">
         <div class="flex">
-
+            <!-- <h1 *ngIf="visible">THIS IS VISIBLE</h1> -->
             <p class="nowrap">Project <span>0{{i + 1}}</span></p>
             <span class="line"></span>
             <div class="flex flex-col">
                 <h2 class="">{{projects.title}}</h2>
                 <p>{{projects.overview.text}}</p>
             </div>
-            <a routerLink="/projects/{{projects.slug}}">View Project</a>
+            <a routerLink="/projects/{{projects.slug}}">View Project <i class="ri-arrow-right-line"></i></a>
 
         </div>
     </section>
+</div>
+<div class="loadMore">
+    <button *ngIf="showLoadMoreButton" (click)="loadMoreProjects()">LOAD MORE <i
+            class="ri-add-circle-fill ri-xl"></i></button>
 </div>

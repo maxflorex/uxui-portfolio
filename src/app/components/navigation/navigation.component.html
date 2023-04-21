@@ -7,15 +7,13 @@
 
         <!-- MENU -->
         <ul class="second-column">
-            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
             <li><a routerLink="/projects">Projects</a></li>
-            <li class="contact">
-                <div>
-                    <h3 (click)="openContact()">Contact</h3>
-                    <app-contact-modal *ngIf="sharedService.contactState"></app-contact-modal>
-                </div>
+            <li>
+                <a href="mailto:max@maxflores.dev">
+                    <i class="ri-mail-line ri-xl icon"></i>
+                </a>
             </li>
-            <li> <i class="ri-moon-line"></i></li>
         </ul>
     </div>
 </nav>

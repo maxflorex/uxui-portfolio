@@ -1,11 +1,13 @@
+@import '../../../style/variables.scss';
+
 footer {
-    color: var(--dark);
+    color: $dark;
     margin-top: 8rem;
 
     a {
         font-size: 2rem;
         font-weight: 600;
-        color: var(--dark);
+        color: $dark;
     }
 
     &:hover {

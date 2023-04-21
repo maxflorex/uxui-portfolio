@@ -1,7 +1,7 @@
 @import '../../../style/styles.scss';
 
 .modal {
-    background-color: var(--darkOff);
+    background-color: $darkOff;
     backdrop-filter: blur(1rem);
     padding: 4rem;
     position: fixed;
@@ -20,9 +20,10 @@
 
     i {
         position: absolute;
-        padding: 2rem;
+        margin: 2rem;
         top: 0;
         right: 0;
-        color: var(--red)
+        color: $red;
+        cursor: pointer;
     }
 }

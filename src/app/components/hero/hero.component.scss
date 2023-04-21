@@ -1,15 +1,28 @@
+@import '../../../style/styles.scss';
+
 section {
     height: 70vh;
     display: flex;
 }
 
 span {
-    color: var(--red);
+    color: $red;
+}
+
+h1 {
+    @include media {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
 }
 
 h2 {
     font-weight: 400;
     padding-top: 0.8rem;
+
+    @include media {
+        font-size: 1.4rem;
+    }
 }
 
 .flex {

@@ -1,4 +1,4 @@
-<div *ngFor="let projects of projectList$ | async; let i = index">
+<div *ngFor="let projects of projectList$ | async; let i = index" class="padre">
 
     <!-- BANNER -->
     <img src={{projects.bannerPicture[0].url}} alt="Project Banner" class="big">
@@ -18,3 +18,4 @@
         </div>
     </section>
 </div>
+<app-footer></app-footer>

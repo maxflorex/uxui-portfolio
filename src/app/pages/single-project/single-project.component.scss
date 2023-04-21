@@ -1,10 +1,24 @@
 @import '../../../style/styles.scss';
 
+.main {
+    margin-top: 6rem;
+    @include media {
+        flex-direction: column-reverse !important;
+    }
+}
+
 img {
     width: 100%;
-    max-height: 600px;
+    max-height: 24rem;
     object-fit: cover;
     box-sizing: border-box;
+    opacity: 0.7;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .container {
@@ -12,8 +26,8 @@ img {
     padding-top: 14rem;
 
     @include media(1024px) {
-        padding-top: 4rem;
-        padding-bottom: 7rem;
+        padding-bottom: 4rem;
+        padding-top: 7rem;
     }
 
     &.image,
@@ -27,7 +41,7 @@ img {
 }
 
 .line {
-    border-top: 2px solid var(--off);
+    border-top: 2px solid $off;
     width: 8rem;
     justify-self: center;
     margin: 1rem 2rem;
@@ -38,7 +52,7 @@ img {
 }
 
 p {
-    color: var(--off);
+    color: $off;
 
     &:hover {
         color: white;
@@ -76,6 +90,7 @@ p {
     align-items: flex-start;
     display: flex;
     gap: 1rem;
+
     @include media(1024px) {
         flex-direction: column;
     }
@@ -101,7 +116,7 @@ h3 {
 }
 
 a {
-    background-color: var(--red);
+    background-color: $red;
     border-radius: 2rem;
     min-width: auto;
     padding: 0;
@@ -116,14 +131,6 @@ a {
 
     h3:not(:first-child) {
         padding-top: 1rem;
-    }
-}
-
-.main {
-    margin-top: 8rem;
-
-    @include media(1024px) {
-        flex-direction: column-reverse;
     }
 }
 
