@@ -1,22 +1,35 @@
 @import '../../../style/variables.scss';
+@import '../../../style/mixins.scss';
 
 footer {
     color: $dark;
     margin-top: 8rem;
+    @include flex(column, center, center, auto, 0.6rem);
+    background-image: url('https://www.transparenttextures.com/patterns/worn-dots.png');
 
     a {
         font-size: 2rem;
         font-weight: 600;
         color: $dark;
+        @include flex(row, center, center, auto, 0.4rem);
+
+        &.small {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 1rem;
+
+            &.small {
+                text-decoration: none;
+                color: $red;
+            }
+        }
     }
 
     &:hover {
         background-color: white;
         transition: 0.1s ease-in-out;
-
-        a {
-            text-decoration: underline;
-            text-underline-offset: 1rem;
-        }
     }
 }

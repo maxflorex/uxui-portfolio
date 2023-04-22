@@ -110,7 +110,7 @@ a {
     min-width: auto;
     margin: 0;
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.6rem;
     min-width: fit-content;
     font-weight: 600;
     cursor: pointer;
@@ -125,7 +125,8 @@ a {
     }
 
     @include media {
-        padding: 0.5 1rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
     }
 
     i {
@@ -136,15 +137,15 @@ a {
 .loadMore {
     margin-bottom: 4rem;
     @include flex(row, center, center, 100%, 0);
+    font-weight: 600;
 
     button {
         color: $off;
-        border: 2px solid transparent;
         background-color: transparent;
 
         &:hover {
-            color: $red;
-            border: 2px solid $red;
+            color: $dark;
+            background-color: $green
         }
 
         @include flex(row, center, center, auto, 0.4rem);

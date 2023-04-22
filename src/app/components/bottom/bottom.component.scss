@@ -1,0 +1,33 @@
+@import '../../../style/mixins.scss';
+@import '../../../style/styles.scss';
+
+section {
+    background-color: $green;
+}
+
+article {
+    padding: 0.4rem;
+    max-width: 1440px;
+    margin: auto;
+    @include flex(row, space-between, center, auto, 2rem);
+    flex-wrap: nowrap;
+
+    @include media {
+        @include flex(column, center, center, auto, 0.4rem);
+    }
+}
+
+.second-column {
+    @include flex(row, flex-end, center, auto, 0.4rem);
+    flex-wrap: nowrap;
+
+    @include media {
+        display: none;
+    }
+
+    a {
+        &:hover {
+            color: $red;
+        }
+    }
+}

@@ -20,6 +20,7 @@ import { AllProjectsComponent } from './pages/all-projects/all-projects.componen
 import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
 import { ImageModalComponent } from './components/image-modal/image-modal.component';
 import { AboutComponent } from './pages/about/about.component';
+import { BottomComponent } from './components/bottom/bottom.component';
 
 @NgModule({
 	declarations: [
@@ -36,6 +37,7 @@ import { AboutComponent } from './pages/about/about.component';
 		ContactModalComponent,
 		ImageModalComponent,
   AboutComponent,
+  BottomComponent,
 	],
 	imports: [
 		BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -8,21 +8,19 @@ import { Observable } from 'rxjs';
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.scss']
 })
-export class ErrorComponent implements OnInit {
+export class ErrorComponent {
 
   product_id: any
   items$: Observable<boolean> = new Observable()
 
-  constructor(private route: ActivatedRoute, private store: Store) {
+  constructor(private route: ActivatedRoute, private renderer: Renderer2) {
 
     this.product_id = this.route.snapshot.url[0].path
-    
-    console.log(this.product_id);    
   }
-  
-  ngOnInit(): void {
-    // this.items$ = this.store.select(selectLoading)
-    
+
+  scrollToTop() {
+    this.renderer.setProperty(document.documentElement, 'scrollTop', 0);
+    this.renderer.setProperty(document.body, 'scrollTop', 0);
   }
 
 }

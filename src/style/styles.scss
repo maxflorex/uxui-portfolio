@@ -60,7 +60,7 @@ a {
 
 button {
     border-radius: 4rem;
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.6rem;
     background-color: $red;
     border-style: none;
     color: white;
@@ -69,10 +69,6 @@ button {
 
     &:hover {
         background-color: $green;
-    }
-
-    @include media {
-        padding: 0.5 1rem;
     }
 }
 

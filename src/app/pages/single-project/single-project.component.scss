@@ -68,6 +68,7 @@ p {
         width: 40%;
         font-size: 1rem;
         line-height: 2rem;
+        text-align: justify;
     }
 
     @include media(1280px) {
@@ -81,7 +82,7 @@ p {
         padding: 1rem 0;
 
         p {
-            width: 80%;
+            width: 100%;
         }
     }
 }

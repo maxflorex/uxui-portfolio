@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map, Observable } from 'rxjs';
 import { AppState } from 'src/app/util/state/app.state';
 import { Store, select } from '@ngrx/store';
@@ -13,7 +13,6 @@ import { loadURL } from 'src/app/util/state/url-state/url.actions';
 	templateUrl: './single-project.component.html',
 	styleUrls: ['./single-project.component.scss']
 })
-
 
 export class SingleProjectComponent implements OnInit {
 
@@ -45,3 +44,6 @@ export class SingleProjectComponent implements OnInit {
 
 	}
 }
+
+
+

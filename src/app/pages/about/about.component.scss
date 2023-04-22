@@ -1,0 +1,42 @@
+@import '../../../style/variables.scss';
+@import '../../../style/mixins.scss';
+
+section {
+    min-height: 100vh;
+    @include flex(column, space-between, center, 100%, 0);
+}
+
+.container {
+    padding-top: 9rem;
+    width: 100%;
+    @include flex(column, space-between, center, 100%, 0);
+
+    h1,
+    h4 {
+        text-align: center;
+    }
+
+    h4 {
+        color: $green;
+    }
+
+    img {
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 24rem;
+        margin-top: 4rem;
+    }
+
+    p {
+        max-width: 24rem;
+        padding: 4rem 0;
+        text-align: justify;
+    }
+
+    @include media {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
