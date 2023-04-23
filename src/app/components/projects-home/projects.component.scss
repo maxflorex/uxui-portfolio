@@ -27,8 +27,8 @@ section {
     padding-bottom: 12rem !important;
 
     @include media(1024px) {
-        padding-top: 4rem;
-        padding-bottom: 7rem;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
     }
 }
 
@@ -45,6 +45,10 @@ section {
 
 p {
     color: $off;
+
+    &:hover {
+        color: white;
+    }
 }
 
 .flex-col {
@@ -56,6 +60,7 @@ p {
         width: 40%;
         font-size: 1rem;
         line-height: 2rem;
+        text-align: justify;
     }
 
     @include media(1280px) {
@@ -69,7 +74,7 @@ p {
         padding: 1rem 0;
 
         p {
-            width: 80%;
+            width: 100%;
         }
     }
 }
@@ -130,7 +135,7 @@ a {
     }
 
     i {
-        color: white
+        color: white;
     }
 }
 
@@ -145,7 +150,7 @@ a {
 
         &:hover {
             color: $dark;
-            background-color: $green
+            background-color: $green;
         }
 
         @include flex(row, center, center, auto, 0.4rem);

@@ -142,16 +142,25 @@ a {
 
     &.column-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        
+        @include media {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 
     &.column-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        @include media {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 
     img {
         padding: 0;
         margin: 0;
     }
+
 }
 
 .mockups {
